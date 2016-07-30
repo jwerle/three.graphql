@@ -17,8 +17,9 @@ const kDefaultQuery = `
 ## a MeshBasicMaterial
 query render($width: Float,
              $height: Float,
-             $rotateX: Float,
-             $rotateY: Float) {
+             #$rotateX: Float,
+             #$rotateY: Float
+             $tickr: Float) {
   ## Describes renderer
   WebGLRenderer {
     ## set viewport width/height based on context inputs
@@ -33,16 +34,36 @@ query render($width: Float,
     Scene {
 
       ## Describes a named Mesh
-      Mesh(name: "box") {
-        ## Contruct geometry and material for mesh
-        BoxGeometry(width: 200, height: 200, depth: 200)
-        MeshBasicMaterial(wireframe: true)
+      a: Mesh(name: "box-a") {
+        setRotation(x: $tickr)
+        setPosition(x: 200, y: 200)
+        ...BoxWireframe
+      }
 
-        ## Set mesh rotation basd on rotation inputs
-        setRotation(x: $rotateX, y: $rotateY)
+      b: Mesh(name: "box-b") {
+        setPosition(x: -200, y: -200)
+        setRotation(y: $tickr)
+        ...Box
+      }
+
+      c: Mesh(name: "box-c") {
+        setRotation(z: $tickr)
+        setPosition(x: 0)
+        ...Box
       }
     }
   }
+}
+
+fragment BoxWireframe on Mesh {
+  ## Contruct geometry and material for mesh
+  BoxGeometry(width: 100, height: 100, depth: 100)
+  MeshBasicMaterial(wireframe: true)
+}
+
+fragment Box on Mesh {
+  BoxGeometry(width: 100, height: 100, depth: 100)
+  MeshBasicMaterial(wireframe: false)
 }
 `
 

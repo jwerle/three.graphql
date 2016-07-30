@@ -26,14 +26,20 @@ class Context {
     Object.assign(this, initial || {})
     const self = this
     let tick = 0
+    let lastLoop = new Date
     this.store = {}
     this.set('PI', Math.PI)
     this.set('time', Date.now())
     this.set('tick', tick)
     requestAnimationFrame(function clock() {
       requestAnimationFrame(clock)
+      const thisLoop = new Date
+      const fps = 1000 / (thisLoop - lastLoop)
+      lastLoop = thisLoop
       self.set('time', Date.now())
       self.set('tick', ++tick)
+      self.set('tickr', tick * 0.01)
+      self.set('fps', fps)
     })
   }
 
