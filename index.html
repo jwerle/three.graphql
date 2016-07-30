@@ -5,28 +5,10 @@
     <title>index</title>
     <script type="text/javascript" charset="utf-8" src="build.js"></script>
     <link rel="stylesheet" href="/editor.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="/node_modules/graphiql/graphiql.css" type="text/css" media="screen" charset="utf-8">
   </head>
   <body>
-    <section id="editor">
-      <pre contenteditable>
-      {
-        WebGLRenderer {
-          setSize(width: 640, height: 640)
-          PerspectiveCamera(fov: 75, aspect: 1, near: 1, far: 10000) {
-            setPosition(z: 500)
-          }
-          Scene {
-            Mesh(name: "box") {
-              geometry: BoxGeometry(width: 200, height: 200, depth: 200)
-              material: MeshBasicMaterial(wireframe: true)
-              setRotation(x: 0.01, y: 0.02)
-            }
-          }
-        }
-      }
-      </pre>
-    </section>
-
+    <section id="graphiql"> </section>
     <section id="viewport"> <canvas></canvas> </section>
   </body>
 </html>

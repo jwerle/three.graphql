@@ -24,6 +24,29 @@ const createContext = module.exports = (initial) => new Context(initial)
 class Context {
   constructor(initial) {
     Object.assign(this, initial || {})
+    const self = this
+    let tick = 0
+    this.store = {}
+    this.set('PI', Math.PI)
+    this.set('time', Date.now())
+    this.set('tick', tick)
+    requestAnimationFrame(function clock() {
+      requestAnimationFrame(clock)
+      self.set('time', Date.now())
+      self.set('tick', ++tick)
+    })
+  }
+
+  get(key) {
+    return this.store[key]
+  }
+
+  set(key, value) {
+    this.store[key] = value
+  }
+
+  toJSON() {
+    return this.store
   }
 
   restore(property) {
@@ -40,6 +63,10 @@ class Context {
 
   material(name) {
     return this[`material.${name}`]
+  }
+
+  extend(data) {
+    return Object.assign(this.store, data || {})
   }
 }
 

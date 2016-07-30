@@ -13,16 +13,22 @@
 
 .cf { *zoom: 1; }
 
-#editor {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#graphiql {
   display: block;
-  float: left;
-  height: 100%;
-  width: 48%;
-  padding: 1%;
+  width: 100%;
+  height: 100vh;
 }
 
 #viewport {
   display: block;
-  width: 50%;
-  float: right;
+  position: absolute;
+  right: 0;
+  top: 48px;
+  height: calc(100vh - 48px);
+  overflow: hidden;
 }
