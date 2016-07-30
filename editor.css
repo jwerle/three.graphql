@@ -1,0 +1,28 @@
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after { clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ **/
+
+.cf { *zoom: 1; }
+
+#editor {
+  display: block;
+  float: left;
+  height: 100%;
+  width: 48%;
+  padding: 1%;
+}
+
+#viewport {
+  display: block;
+  width: 50%;
+  float: right;
+}

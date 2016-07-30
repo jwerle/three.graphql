@@ -1,0 +1,21 @@
+type MeshBasicMaterial implements Material {
+
+## Material fields
+  id: Int
+  name: String
+  opacity: Float
+  transparent: Boolean
+  blending: MaterialBlending
+  blendSrc: Int
+  blendDst: Int
+  depthTest: Boolean
+  depthWrite: Boolean
+  polygonOffset: Boolean
+  polygonOffsetFactor: Int
+  polygonOffsetUnits: Int
+  alphaTest: Boolean
+  clipShadows: Boolean
+  overdraw: Float
+  visible: Boolean
+  side: MaterialSide
+}

@@ -1,0 +1,31 @@
+type PerspectiveCamera implements Object3D {
+  matrixWorldInverse: Matrix4
+  projectionMatrix: Matrix4
+  focus: Float
+  zoom: Float
+  fov: Float
+
+### Object3D properties
+	id: Int
+  uuid: String
+	name: String
+	parent: Object3D
+	children: [Object3D]
+	position: Vector3
+	rotation: Euler
+	scale: Vector3
+	up: Vector3
+	matrix: Matrix4
+	quaternion: Quaternion
+	visible: Boolean
+	castShadow: Boolean
+	receiveShadow: Boolean
+	frustumCulled: Boolean
+  matrixAutoUpdate: Boolean
+  matrixWorldNeedsUpdate: Boolean
+  matrixWorld: Matrix4
+  setQuaternion(x: Float, y: Float, z: Float, w: Float): Int
+  setPosition(x: Float, y: Float, z: Float): Int
+  setRotation(x: Float, y: Float, z: Float): Int
+  setScale(x: Float, y: Float, z: Float): Int
+}

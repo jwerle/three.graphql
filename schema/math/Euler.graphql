@@ -1,0 +1,6 @@
+type Euler {
+  order: String
+  x: Float
+  y: Float
+  z: Float
+}

@@ -1,0 +1,83 @@
+interface Object3D {
+  # readonly – Unique number for this object instance.
+  id: Int
+
+  # UUID of this object instance. This gets automatically assigned, so this shouldn't be edited.
+  uuid: String
+
+  # Optional name of the object (doesn't need to be unique).
+  name: String
+
+  # Object's parent in the scene graph.
+  parent: Object3D
+
+  # Array with object's children.
+  children: [Object3D]
+
+  # Object's local position.
+  position: Vector3
+
+  # Object's local rotation (Euler angles), in radians.
+  rotation: Euler
+
+  # Object's local scale.
+  scale: Vector3
+
+  # Up direction. Default is THREE.Vector3( 0, 1, 0 ).
+  up: Vector3
+
+  # Local transform.
+  matrix: Matrix4
+
+  # Object's local rotation as Quaternion.
+  quaternion: Quaternion
+
+  # Object gets rendered if true.
+  #   default – true
+  visible: Boolean
+
+  # Gets rendered into shadow map.
+  #   default – false
+  castShadow: Boolean
+
+  # Matrix gets baked in shadow receiving.
+  #  default – false
+  receiveShadow: Boolean
+
+  # When this is set, it checks every frame if
+  # the object is in the frustum of the camera.
+  # Otherwise the object gets drawn every frame
+  # even if it isn't visible.
+  #
+  #  default – true
+  frustumCulled: Boolean
+
+  # When this is set, it calculates the matrix
+  # of position, (rotation or quaternion) and
+  # scale every frame and also recalculates the
+  # matrixWorld property.
+  #
+  #   default – true
+  matrixAutoUpdate: Boolean
+
+  # When this is set, it calculates the matrixWorld
+  # in that frame and resets this property to false.
+  #
+  #   default – false
+  matrixWorldNeedsUpdate: Boolean
+
+  # An object that can be used to store custom data
+  # about the Object3d. It should not hold references
+  # to functions as these will not be cloned.
+  #userData:
+
+  # The global transform of the object. If the
+  # Object3d has no parent, then it's identical to
+  # the local transform.
+  matrixWorld: Matrix4
+
+  setQuaternion(x: Float, y: Float, z: Float, w: Float): Int
+  setPosition(x: Float, y: Float, z: Float): Int
+  setRotation(x: Float, y: Float, z: Float): Int
+  setScale(x: Float, y: Float, z: Float): Int
+}

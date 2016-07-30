@@ -1,0 +1,8 @@
+type WebGLRenderer {
+  setSize(width: Float!, height: Float!): Int
+  PerspectiveCamera(fov: Float,
+                    aspect: Float,
+                    near: Float,
+                    far: Float) : PerspectiveCamera
+  Scene: Scene
+}

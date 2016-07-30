@@ -1,23 +1,3 @@
-three.graphql
-=============
-
-Declare a Three.js program with GraphQL
-
-## why ?
-
-to experiment
-
-## how ?
-
-`three.graphql` utilizes a graphql implementation to build and maintain
-a scene tree. Three.js objects are created when they don't exist and
-properties are changed when there is a difference. A GraphQL query
-represents the state of a Three.js program at any moment
-
-
-## usage
-
-```js
 'use strict'
 
 const ready = require('domready')
@@ -63,4 +43,3 @@ function rotate(ctx) {
   ctx.rotation.x += 0.01
   ctx.rotation.y += 0.02
 }
-```

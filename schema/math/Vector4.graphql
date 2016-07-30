@@ -1,0 +1,6 @@
+type Vector4 {
+  x: Float
+  y: Float
+  z: Float
+  w: Float
+}

@@ -1,0 +1,27 @@
+{
+  "name": "three.graphql",
+  "version": "0.0.1",
+  "description": "Query & Create THREE objects with GraphQL",
+  "main": "index.js",
+  "scripts": {
+    "test": ":"
+  },
+  "keywords": [
+    "three",
+    "graphql"
+  ],
+  "author": "Joseph Werle <werle@littlstar.com>",
+  "license": "MIT",
+  "dependencies": {
+    "domready": "^1.0.8",
+    "glob": "^7.0.5",
+    "graph": "^0.2.0",
+    "graph.ql": "^2.0.0",
+    "three": "^0.79.0"
+  },
+  "devDependencies": {
+    "brfs": "^1.4.3",
+    "budo": "^8.3.0",
+    "graphiql": "^0.7.3"
+  }
+}
