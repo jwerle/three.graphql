@@ -4,7 +4,11 @@
   "description": "Query & Create THREE objects with GraphQL",
   "main": "index.js",
   "scripts": {
-    "test": ":"
+    "test": "budo test -p 3000 -s --- -t brfs",
+    "editor": "npm run build:editor && budo",
+    "build": "npm run build:editor",
+    "build:editor": "browserify editor.js -t brfs -o build.js",
+    "start": "budo -s . -p 3000"
   },
   "keywords": [
     "three",
@@ -22,6 +26,8 @@
   "devDependencies": {
     "brfs": "^1.4.3",
     "budo": "^8.3.0",
-    "graphiql": "^0.7.3"
+    "graphiql": "^0.7.3",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0"
   }
 }
