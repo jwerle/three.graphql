@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Example Test Suite</title>
+    <link rel="stylesheet" href="node_modules/nodeunit/share/nodeunit.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <script src="node_modules/nodeunit/examples/browser/nodeunit.js" type="text/javascript" charset="utf-8"></script>
+    <script src="test/core.js"></script>
+    <script src="test/extra.js"></script>
+    <script src="lib/graph.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/extras.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1 id="nodeunit-header">GraphJS Test Suite</h1>
+    <script>
+      nodeunit.run({
+        'Core':   core_suite,
+        'Extras': extra_suite,
+      });
+    </script>
+  </body>
+</html>
