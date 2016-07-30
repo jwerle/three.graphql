@@ -1,5 +1,5 @@
 
-all: editor
+default: build
 
 node_modules:
 	npm install

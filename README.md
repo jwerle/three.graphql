@@ -23,6 +23,18 @@ Input properties are merged into existing objects.
 
 ![](assets/screenshot.png)
 
+## build
+
+```sh
+$ make
+```
+
+## starting editor
+
+```sh
+$ npm start
+```
+
 ## License
 
 MIT
