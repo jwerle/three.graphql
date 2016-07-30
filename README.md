@@ -23,6 +23,11 @@ Input properties are merged into existing objects.
 
 ![](assets/screenshot.png)
 
+## features
+
+* Only `BoxGeometry` and `MeshBasicMaterial` have been built into the
+`Mesh` sub-selection.
+
 ## build
 
 ```sh
