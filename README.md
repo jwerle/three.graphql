@@ -3,6 +3,10 @@ three.graphql
 
 Declare a Three.js program with GraphQL
 
+## status
+
+fun, wip, diy
+
 ## why ?
 
 to experiment
