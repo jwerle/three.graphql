@@ -1,0 +1,9 @@
+type SphereGeometry {
+  radius: Float
+  widthSegments: Float
+  heightSegments: Float
+  phiStart: Float
+  phiLength: Float
+  thetaStart: Float
+  thetaLength: Float
+}

@@ -1,7 +1,20 @@
 type Mesh implements Object3D {
-  BoxGeometry(name: String, width: Float, height: Float, depth: Float): Int
-  MeshBasicMaterial(color: Color, wireframe: Boolean): Int
+### Geometries
+  SphereGeometry(radius: Float,
+                 widthSegments: Float,
+                 heightSegments: Float,
+                 phiStart: Float,
+                 phiLength: Float,
+                 thetaStart: Float,
+                 thetaLength: Float): Int
 
+  BoxGeometry(name: String,
+              width: Float,
+              height: Float,
+              depth: Float): Int
+
+### Materials
+  MeshBasicMaterial(color: String, wireframe: Boolean): Int
 
 ### Object3D properties
 	id: Int

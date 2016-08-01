@@ -1,4 +1,7 @@
 interface Object3D {
+  # Create a chid mesh
+  Mesh(name: String!): Mesh
+
   # readonly – Unique number for this object instance.
   id: Int
 

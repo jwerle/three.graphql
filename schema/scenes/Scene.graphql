@@ -1,5 +1,4 @@
 type Scene implements Object3D  {
-  Mesh(name: String!): Mesh
 
 ### Object3D properties
 	id: Int
@@ -24,4 +23,5 @@ type Scene implements Object3D  {
   setPosition(x: Float, y: Float, z: Float): Int
   setRotation(x: Float, y: Float, z: Float): Int
   setScale(x: Float, y: Float, z: Float): Int
+  Mesh(name: String!): Mesh
 }

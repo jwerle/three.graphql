@@ -40,6 +40,7 @@ const map = {
     implementation: require('./geometries'),
     buffer: Buffer.concat([
       fs.readFileSync(__dirname + '/geometries/BoxGeometry.graphql'),
+      fs.readFileSync(__dirname + '/geometries/SphereGeometry.graphql'),
     ])
   },
 
